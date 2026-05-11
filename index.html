@@ -414,6 +414,18 @@ hr.divider {
 .proj-status { font-size: 0.7rem; margin-top: 0.7rem; }
 .st-done { color: var(--green); }
 .st-wip  { color: var(--yellow); }
+.proj-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 0.8rem; }
+.proj-link {
+  font-size: 0.68rem;
+  color: var(--cyan);
+  text-decoration: none;
+  border: 1px solid rgba(0,255,204,0.25);
+  padding: 0.2rem 0.55rem;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+}
+.proj-link::before { content: '> '; color: var(--green-dim); }
+.proj-link:hover { border-color: var(--cyan); background: rgba(0,255,204,0.05); }
 
 /* BLOG */
 .blog-list { display: flex; flex-direction: column; gap: 1px; }
@@ -717,6 +729,18 @@ footer strong { color: var(--green-dim); font-weight: normal; }
           <span class="tag">GitHub</span><span class="tag">Documentation</span><span class="tag">Markdown</span>
         </div>
         <div class="proj-status st-done">&#9632; COMPLETE</div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-id">07 // IR-FIELD-007</div>
+        <div class="proj-name">NETSUPPORT RAT — SOC INVESTIGATION</div>
+        <div class="proj-desc">Triaged a live SIEM alert for NetSupport Manager RAT C2 activity. Performed full pcap analysis in Wireshark — identified infected host, compromised user account, and C2 infrastructure. Uncovered active AD enumeration via SAMR protocol, confirming domain-level reconnaissance by the threat actor. Formal incident report produced with full IOC list and MITRE ATT&CK mapping.</div>
+        <div class="tags">
+          <span class="tag">Wireshark</span><span class="tag">MITRE ATT&CK</span><span class="tag">pcap Analysis</span><span class="tag">AD Enumeration</span><span class="tag">SAMR</span>
+        </div>
+        <div class="proj-footer">
+          <div class="proj-status st-done">&#9632; COMPLETE</div>
+          <a class="proj-link" href="https://github.com/GEEKSLAM/incident-response-lab/tree/main/investigations/2026-02-28-netsupport-rat" target="_blank" rel="noopener">view report</a>
+        </div>
       </div>
     </div>
   </div>
